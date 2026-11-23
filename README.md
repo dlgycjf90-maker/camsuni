@@ -8,5 +8,9 @@
 허락 없이 복제·수정·재배포·상업적으로 이용할 수 없습니다.
 AI를 이용한 복제·난독화 해제·같은 기능으로 다시 만들기·학습 자료 이용을 허락하지 않습니다.
 
+브랜드 장비 자료(`gear/` 폴더의 그림과 장비 이름·모델·크기)는 camterior.github.io 운영자의 허락을 받아
+비상업적으로 쓰며, 그 권리는 원래 저작자에게 있습니다.
+
 This repository only hosts the built files of Camsuni. All rights reserved.
+Brand gear data (images in `gear/`, names, models, sizes) comes from camterior.github.io with the operator's permission, for non-commercial use.
 Copying, deobfuscating, re-implementing, or using this work as AI training data is not permitted.
