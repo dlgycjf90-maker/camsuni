@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 캠순이 앱 아이콘(앱 2.9): 눈 쌓인 캠순이 텐트 + 앞의 화덕불 — 직접 그린 원본 -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b3557"/>
+      <stop offset=".62" stop-color="#2f5d86"/>
+      <stop offset="1" stop-color="#4b7ea6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="372" cy="392" r="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffc35c" stop-opacity=".75"/>
+      <stop offset=".35" stop-color="#ff9a3c" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="snow" x1="0" y1="360" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d7e7f3"/>
+    </linearGradient>
+    <linearGradient id="tentLit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset=".45" stop-color="#ffb04a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffb04a" stop-opacity=".28"/>
+    </linearGradient>
+    <radialGradient id="flame" cx=".5" cy=".75" r=".75">
+      <stop offset="0" stop-color="#fff3b0"/>
+      <stop offset=".45" stop-color="#ffc23a"/>
+      <stop offset="1" stop-color="#ff6a1f"/>
+    </radialGradient>
+  </defs>
+  <rect x="-100" y="-100" width="712" height="712" fill="url(#sky)"/>
+  <!-- 별 -->
+  <g fill="#fff">
+    <circle cx="70" cy="74" r="3.2" opacity=".9"/><circle cx="148" cy="44" r="2.4" opacity=".75"/><circle cx="412" cy="58" r="3" opacity=".85"/>
+    <circle cx="462" cy="128" r="2.2" opacity=".7"/><circle cx="318" cy="96" r="2" opacity=".65"/><circle cx="46" cy="170" r="2" opacity=".6"/>
+    <path d="M392 150l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" opacity=".9"/>
+  </g>
+  <!-- 달 -->
+  <path d="M118 112a40 40 0 1 0 40 52a32 32 0 1 1-40-52z" fill="#fff4cf"/>
+  <!-- 뒤 눈 언덕 -->
+  <path d="M-100 352L0 336q128-58 256-30t256-18L612 280V612H-100z" fill="#c4d9ea"/>
+  <!-- 불빛 -->
+  <rect x="-100" y="-100" width="712" height="712" fill="url(#glow)"/>
+  <!-- 앞 눈 바닥 -->
+  <path d="M-100 396L0 382q140-34 270-14t242-6L612 358V612H-100z" fill="url(#snow)"/>
+  <!-- 텐트 그림자 -->
+  <ellipse cx="224" cy="428" rx="132" ry="16" fill="#9fb8cc" opacity=".55"/>
+  <!-- 캠순이 텐트(앱 마스코트 모양) -->
+  <g transform="translate(78 140) scale(2.44)">
+    <path d="M60 18c3 0 5 2 6 5l38 73c2 5-1 10-7 10H23c-6 0-9-5-7-10l38-73c1-3 3-5 6-5z" fill="#2f7a62"/>
+    <path d="M60 18c3 0 5 2 6 5l38 73c2 5-1 10-7 10H60z" fill="#000" opacity=".1"/>
+    <path d="M60 18c3 0 5 2 6 5l38 73c2 5-1 10-7 10H23c-6 0-9-5-7-10l38-73c1-3 3-5 6-5z" fill="url(#tentLit)"/>
+    <!-- 문 -->
+    <path d="M51 106V93q9-9 18 0v13z" fill="#13352a"/>
+    <path d="M53 106V95q7-6 14 0v11z" fill="#ffcf73" opacity=".55"/>
+    <!-- 얼굴 -->
+    <ellipse cx="48" cy="66" rx="4.2" ry="5.2" fill="#1d2a2f"/><ellipse cx="72" cy="66" rx="4.2" ry="5.2" fill="#1d2a2f"/>
+    <circle cx="49.6" cy="64" r="1.5" fill="#fff"/><circle cx="73.6" cy="64" r="1.5" fill="#fff"/>
+    <ellipse cx="40" cy="76" rx="6" ry="3.4" fill="#ff9fae" opacity=".9"/><ellipse cx="80" cy="76" rx="6" ry="3.4" fill="#ff9fae" opacity=".9"/>
+    <path d="M54 75q6 6 12 0" stroke="#1d2a2f" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <!-- 폴 끝·스트링(텐트로 보이게) -->
+    <path d="M60 16V7" stroke="#6b5442" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M37 60L6 104M83 60l31 44" stroke="#eef3f7" stroke-width="1.1" opacity=".85"/>
+    <circle cx="6" cy="104" r="1.8" fill="#6b5442"/><circle cx="114" cy="104" r="1.8" fill="#6b5442"/>
+    <!-- 쌓인 눈 -->
+    <path d="M60 15c4 0 6 2 8 6l9 18q-5 5-10 2q-4 6-8 1q-5 5-9 0q-5 4-9-2l9-19c2-4 5-6 10-6z" fill="#fff"/>
+    <path d="M50 37q3 2 7 1M63 38q3 2 7-1" stroke="#d3e4f0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M17 99q8-4 16 0q7-4 14 0M73 99q8-4 15 0q8-4 15 1" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- 화덕(받침 + 그릇) -->
+  <g>
+    <path d="M338 436l-8 22M406 436l8 22M372 440v20" stroke="#2b2f34" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="372" cy="424" rx="58" ry="16" fill="#3a4047"/>
+    <path d="M314 424q2 22 58 24q56-2 58-24" fill="#2b3036"/>
+    <ellipse cx="372" cy="422" rx="50" ry="11" fill="#1d2126"/>
+    <!-- 장작 -->
+    <path d="M336 420l66-14M344 408l62 16" stroke="#7a4a26" stroke-width="10" stroke-linecap="round"/>
+    <path d="M336 420l66-14" stroke="#9a6234" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <!-- 불 -->
+    <path d="M372 312c14 22 38 38 38 72c0 22-17 34-38 34s-38-12-38-34c0-20 12-28 18-42c4 12 10 16 14 16c-2-14 0-30 6-46z" fill="url(#flame)"/>
+    <path d="M374 362c8 12 18 18 18 34c0 12-9 18-20 18s-20-6-20-18c0-10 7-14 10-22c2 6 6 8 8 8c-1-8 0-14 4-20z" fill="#fff6c8" opacity=".9"/>
+    <circle cx="420" cy="330" r="3.4" fill="#ffd36b"/><circle cx="334" cy="318" r="2.6" fill="#ffb347"/><circle cx="398" cy="296" r="2.2" fill="#ffe08a"/>
+  </g>
+  <!-- 내리는 눈 -->
+  <g fill="#fff">
+    <circle cx="40" cy="250" r="4.4" opacity=".85"/><circle cx="96" cy="300" r="3.2" opacity=".8"/><circle cx="470" cy="236" r="4" opacity=".85"/>
+    <circle cx="430" cy="196" r="3" opacity=".75"/><circle cx="292" cy="160" r="3.6" opacity=".8"/><circle cx="216" cy="74" r="3" opacity=".7"/>
+    <circle cx="488" cy="318" r="3" opacity=".7"/><circle cx="262" cy="238" r="2.6" opacity=".6"/>
+  </g>
+</svg>
