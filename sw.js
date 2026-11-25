@@ -5,7 +5,7 @@
    · ver.json(새 버전 확인)·다른 주소(Firebase 서버·날씨·글꼴·three.js)는 손대지 않음
    짐·배치 같은 자료는 여기서 보관하지 않는다(Firebase 가 이 기기 저장본에 따로 보관). */
 'use strict';
-const BUILD = "6957f18fd9e0";
+const BUILD = "53b410ea9b9a";
 const SHELL = 'cs-shell-' + BUILD, IMG = 'cs-img';
 const BASE = new URL('./', self.location.href).href;
 const SDK_RE = /fb-sdk\.[0-9a-f]{10}\.js/;
