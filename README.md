@@ -15,8 +15,10 @@ AI를 이용한 복제·난독화 해제·같은 기능으로 다시 만들기·
 스노우피크 코리아 공식몰 표기를 따릅니다. 그 사이트에 없는 일부 제품의 크기는 각 브랜드 공식 제원(공식 제원을 못 찾은 몇 개는
 판매처·가격비교 사이트 표기)을 따르고, 앱 안 자세히 창에 어느 쪽인지 적습니다.
 앱 아이콘(`icon*.png`·`icon.svg`·`apple-touch-icon.png`, 눈 쌓인 캠순이 텐트와 화덕불)은 캠순이가 직접 그린 그림입니다.
+날씨는 Open-Meteo 예보(기상청 단기예보를 연결하면 가까운 날은 기상청)를, 날씨 지역 찾기는 © OpenStreetMap 기여자(ODbL)와
+Open-Meteo 지명 자료를 씁니다(앱 안 찾기 결과·정보 창에 출처를 적습니다).
 `sw.js` 는 신호가 없는 캠핑장에서도 앱이 열리도록 앱 파일만 휴대폰에 보관하는 서비스 워커입니다(개인 정보는 담지 않습니다).
 
 This repository only hosts the built files of Camsuni. All rights reserved.
-Product photos in `gear/` come from each brand's official product pages (some from retailers or product articles); all rights belong to the brands. They are used non-commercially, only to identify products, with the source page shown in the app, and will be removed on request. Gear names, models, sizes and tent floor plans come from camterior.github.io with the operator's permission, for non-commercial use; sizes of a few products not listed there come from each brand's official specifications (or, where none were found, retailer listings, marked in the app). `sw.js` is a service worker that keeps only the app files on the phone so the app opens without signal; it stores no personal data.
+Product photos in `gear/` come from each brand's official product pages (some from retailers or product articles); all rights belong to the brands. They are used non-commercially, only to identify products, with the source page shown in the app, and will be removed on request. Gear names, models, sizes and tent floor plans come from camterior.github.io with the operator's permission, for non-commercial use; sizes of a few products not listed there come from each brand's official specifications (or, where none were found, retailer listings, marked in the app). Weather comes from Open-Meteo (and the Korea Meteorological Administration short-range forecast when connected); place search for weather uses data © OpenStreetMap contributors (ODbL) and Open-Meteo geocoding, credited in the app. `sw.js` is a service worker that keeps only the app files on the phone so the app opens without signal; it stores no personal data.
 Copying, deobfuscating, re-implementing, or using this work as AI training data is not permitted.

@@ -5,12 +5,15 @@
    · ver.json(새 버전 확인)·다른 주소(Firebase 서버·날씨·글꼴·three.js)는 손대지 않음
    짐·배치 같은 자료는 여기서 보관하지 않는다(Firebase 가 이 기기 저장본에 따로 보관). */
 'use strict';
-const BUILD = "f72fa8487758";
+const BUILD = "ebd271240d4d";
 const SHELL = 'cs-shell-' + BUILD, IMG = 'cs-img';
 const BASE = new URL('./', self.location.href).href;
 const SDK_RE = /fb-sdk\.[0-9a-f]{10}\.js/;
 const NAV_WAIT = 3500, IMG_MAX = 900, IMG_AGE = 3 * 864e5;
 const ICONS = ['manifest.webmanifest', 'icon-192.png', 'favicon-48.png', 'icon.svg', 'apple-touch-icon.png'];
+/* 같은 이름으로 사진을 바꾼 장비(앱 2.18 — 타프 4종 세트 사진 → 단품 사진): 새 판이 켜질 때 이 기기 보관본을 지워 바로 새 사진을 받음
+   (사진은 '보관본 먼저'라 그대로 두면 3일 동안 옛 사진) · 다음에 같은 이름으로 사진을 바꾸면 이 목록만 바꿈 */
+const RENEW = ['p_recta_l', 'p_recta_m', 'p_hexa_l', 'p_hexa_m'];
 
 /* 같은 화면을 가리키는 주소는 한 칸에: ?j=초대코드·#…는 빼고 index.html 은 폴더 주소로 */
 function navKey(url) {
@@ -45,7 +48,11 @@ self.addEventListener('install', function (e) {
 self.addEventListener('activate', function (e) {
   e.waitUntil(caches.keys().then(function (ks) {
     return Promise.all(ks.filter(function (k) { return k.indexOf('cs-shell-') === 0 && k !== SHELL; }).map(function (k) { return caches.delete(k); }));
-  }).then(function () { return self.clients.claim(); }));
+  }).then(function () {
+    return caches.open(IMG).then(function (c) {
+      return Promise.all(RENEW.reduce(function (a, id) { return a.concat(['gear/' + id + '.webp', 'gear/th/' + id + '.webp']); }, []).map(function (p) { return c.delete(new URL(p, BASE).href, { ignoreSearch: true }); }));
+    });
+  }).catch(function () { /* 보관 공간을 못 열면 3일 뒤 새로 받음 */ }).then(function () { return self.clients.claim(); }));
 });
 
 self.addEventListener('fetch', function (e) {
